@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F4638CC13431220007AA2E3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F4638CB13431220007AA2E3 /* UIKit.framework */; };
+		6F4638CE13431220007AA2E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F4638CD13431220007AA2E3 /* Foundation.framework */; };
+		6F4638D013431220007AA2E3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F4638CF13431220007AA2E3 /* CoreGraphics.framework */; };
+		6F4638D613431220007AA2E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F4638D413431220007AA2E3 /* InfoPlist.strings */; };
+		6F4638D913431220007AA2E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4638D813431220007AA2E3 /* main.m */; };
+		6F4638DC13431220007AA2E3 /* FollowMeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4638DB13431220007AA2E3 /* FollowMeAppDelegate.m */; };
+		6F4638DF13431220007AA2E3 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F4638DD13431220007AA2E3 /* MainWindow.xib */; };
+		6F4638E213431220007AA2E3 /* FollowMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4638E113431220007AA2E3 /* FollowMeViewController.m */; };
+		6F4638E513431220007AA2E3 /* FollowMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F4638E313431220007AA2E3 /* FollowMeViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6F4638C713431220007AA2E3 /* FollowMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FollowMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F4638CB13431220007AA2E3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6F4638CD13431220007AA2E3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6F4638CF13431220007AA2E3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6F4638D313431220007AA2E3 /* FollowMe-Info.plist */ = {isa = PBXFileReference; path = "FollowMe-Info.plist"; sourceTree = "<group>"; };
+		6F4638D513431220007AA2E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6F4638D713431220007AA2E3 /* FollowMe-Prefix.pch */ = {isa = PBXFileReference; path = "FollowMe-Prefix.pch"; sourceTree = "<group>"; };
+		6F4638D813431220007AA2E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6F4638DA13431220007AA2E3 /* FollowMeAppDelegate.h */ = {isa = PBXFileReference; path = FollowMeAppDelegate.h; sourceTree = "<group>"; };
+		6F4638DB13431220007AA2E3 /* FollowMeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FollowMeAppDelegate.m; sourceTree = "<group>"; };
+		6F4638DE13431220007AA2E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		6F4638E013431220007AA2E3 /* FollowMeViewController.h */ = {isa = PBXFileReference; path = FollowMeViewController.h; sourceTree = "<group>"; };
+		6F4638E113431220007AA2E3 /* FollowMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FollowMeViewController.m; sourceTree = "<group>"; };
+		6F4638E413431220007AA2E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FollowMeViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6F4638C413431220007AA2E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F4638CC13431220007AA2E3 /* UIKit.framework in Frameworks */,
+				6F4638CE13431220007AA2E3 /* Foundation.framework in Frameworks */,
+				6F4638D013431220007AA2E3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6F4638BC13431220007AA2E3 = {
+			isa = PBXGroup;
+			children = (
+				6F4638D113431220007AA2E3 /* FollowMe */,
+				6F4638CA13431220007AA2E3 /* Frameworks */,
+				6F4638C813431220007AA2E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6F4638C813431220007AA2E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F4638C713431220007AA2E3 /* FollowMe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F4638CA13431220007AA2E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F4638CB13431220007AA2E3 /* UIKit.framework */,
+				6F4638CD13431220007AA2E3 /* Foundation.framework */,
+				6F4638CF13431220007AA2E3 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F4638D113431220007AA2E3 /* FollowMe */ = {
+			isa = PBXGroup;
+			children = (
+				6F4638DA13431220007AA2E3 /* FollowMeAppDelegate.h */,
+				6F4638DB13431220007AA2E3 /* FollowMeAppDelegate.m */,
+				6F4638DD13431220007AA2E3 /* MainWindow.xib */,
+				6F4638E013431220007AA2E3 /* FollowMeViewController.h */,
+				6F4638E113431220007AA2E3 /* FollowMeViewController.m */,
+				6F4638E313431220007AA2E3 /* FollowMeViewController.xib */,
+				6F4638D213431220007AA2E3 /* Supporting Files */,
+			);
+			path = FollowMe;
+			sourceTree = "<group>";
+		};
+		6F4638D213431220007AA2E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6F4638D313431220007AA2E3 /* FollowMe-Info.plist */,
+				6F4638D413431220007AA2E3 /* InfoPlist.strings */,
+				6F4638D713431220007AA2E3 /* FollowMe-Prefix.pch */,
+				6F4638D813431220007AA2E3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6F4638C613431220007AA2E3 /* FollowMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F4638E813431220007AA2E3 /* Build configuration list for PBXNativeTarget "FollowMe" */;
+			buildPhases = (
+				6F4638C313431220007AA2E3 /* Sources */,
+				6F4638C413431220007AA2E3 /* Frameworks */,
+				6F4638C513431220007AA2E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FollowMe;
+			productName = FollowMe;
+			productReference = 6F4638C713431220007AA2E3 /* FollowMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6F4638BE13431220007AA2E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Fickla;
+			};
+			buildConfigurationList = 6F4638C113431220007AA2E3 /* Build configuration list for PBXProject "FollowMe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6F4638BC13431220007AA2E3;
+			productRefGroup = 6F4638C813431220007AA2E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6F4638C613431220007AA2E3 /* FollowMe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6F4638C513431220007AA2E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F4638D613431220007AA2E3 /* InfoPlist.strings in Resources */,
+				6F4638DF13431220007AA2E3 /* MainWindow.xib in Resources */,
+				6F4638E513431220007AA2E3 /* FollowMeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6F4638C313431220007AA2E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F4638D913431220007AA2E3 /* main.m in Sources */,
+				6F4638DC13431220007AA2E3 /* FollowMeAppDelegate.m in Sources */,
+				6F4638E213431220007AA2E3 /* FollowMeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6F4638D413431220007AA2E3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F4638D513431220007AA2E3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6F4638DD13431220007AA2E3 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F4638DE13431220007AA2E3 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		6F4638E313431220007AA2E3 /* FollowMeViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F4638E413431220007AA2E3 /* en */,
+			);
+			name = FollowMeViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6F4638E613431220007AA2E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6F4638E713431220007AA2E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		6F4638E913431220007AA2E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FollowMe/FollowMe-Prefix.pch";
+				INFOPLIST_FILE = "FollowMe/FollowMe-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6F4638EA13431220007AA2E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FollowMe/FollowMe-Prefix.pch";
+				INFOPLIST_FILE = "FollowMe/FollowMe-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6F4638C113431220007AA2E3 /* Build configuration list for PBXProject "FollowMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F4638E613431220007AA2E3 /* Debug */,
+				6F4638E713431220007AA2E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F4638E813431220007AA2E3 /* Build configuration list for PBXNativeTarget "FollowMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F4638E913431220007AA2E3 /* Debug */,
+				6F4638EA13431220007AA2E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6F4638BE13431220007AA2E3 /* Project object */;
+}
