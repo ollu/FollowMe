@@ -23,16 +23,34 @@
 		6F4638CB13431220007AA2E3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6F4638CD13431220007AA2E3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6F4638CF13431220007AA2E3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		6F4638D313431220007AA2E3 /* FollowMe-Info.plist */ = {isa = PBXFileReference; path = "FollowMe-Info.plist"; sourceTree = "<group>"; };
+		6F4638D313431220007AA2E3 /* FollowMe-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FollowMe-Info.plist"; sourceTree = "<group>"; };
 		6F4638D513431220007AA2E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6F4638D713431220007AA2E3 /* FollowMe-Prefix.pch */ = {isa = PBXFileReference; path = "FollowMe-Prefix.pch"; sourceTree = "<group>"; };
+		6F4638D713431220007AA2E3 /* FollowMe-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FollowMe-Prefix.pch"; sourceTree = "<group>"; };
 		6F4638D813431220007AA2E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6F4638DA13431220007AA2E3 /* FollowMeAppDelegate.h */ = {isa = PBXFileReference; path = FollowMeAppDelegate.h; sourceTree = "<group>"; };
+		6F4638DA13431220007AA2E3 /* FollowMeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FollowMeAppDelegate.h; sourceTree = "<group>"; };
 		6F4638DB13431220007AA2E3 /* FollowMeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FollowMeAppDelegate.m; sourceTree = "<group>"; };
 		6F4638DE13431220007AA2E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		6F4638E013431220007AA2E3 /* FollowMeViewController.h */ = {isa = PBXFileReference; path = FollowMeViewController.h; sourceTree = "<group>"; };
+		6F4638E013431220007AA2E3 /* FollowMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FollowMeViewController.h; sourceTree = "<group>"; };
 		6F4638E113431220007AA2E3 /* FollowMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FollowMeViewController.m; sourceTree = "<group>"; };
 		6F4638E413431220007AA2E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FollowMeViewController.xib; sourceTree = "<group>"; };
+		6F4638F213433260007AA2E3 /* CAAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAnimation.h; sourceTree = "<group>"; };
+		6F4638F313433260007AA2E3 /* CAAnimationGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAnimationGroup.h; sourceTree = "<group>"; };
+		6F4638F413433260007AA2E3 /* CABasicAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CABasicAnimation.h; sourceTree = "<group>"; };
+		6F4638F513433260007AA2E3 /* CAContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAContext.h; sourceTree = "<group>"; };
+		6F4638F613433260007AA2E3 /* CAContextImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAContextImpl.h; sourceTree = "<group>"; };
+		6F4638F713433260007AA2E3 /* CAFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAFilter.h; sourceTree = "<group>"; };
+		6F4638F813433260007AA2E3 /* CAKeyFrameAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAKeyFrameAnimation.h; sourceTree = "<group>"; };
+		6F4638F913433260007AA2E3 /* CALayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALayer.h; sourceTree = "<group>"; };
+		6F4638FA13433260007AA2E3 /* CAMediaTimingFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMediaTimingFunction.h; sourceTree = "<group>"; };
+		6F4638FB13433260007AA2E3 /* CAPropertyAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAPropertyAnimation.h; sourceTree = "<group>"; };
+		6F4638FC13433260007AA2E3 /* CAScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAScrollLayer.h; sourceTree = "<group>"; };
+		6F4638FD13433260007AA2E3 /* CASlotProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CASlotProxy.h; sourceTree = "<group>"; };
+		6F4638FE13433260007AA2E3 /* CASublayerEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CASublayerEnumerator.h; sourceTree = "<group>"; };
+		6F4638FF13433260007AA2E3 /* CATransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransaction.h; sourceTree = "<group>"; };
+		6F46390013433260007AA2E3 /* CATransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransform.h; sourceTree = "<group>"; };
+		6F46390113433260007AA2E3 /* CATransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransition.h; sourceTree = "<group>"; };
+		6F46390213433260007AA2E3 /* NSValue-CATransformAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue-CATransformAdditions.h"; sourceTree = "<group>"; };
+		6F46390313433260007AA2E3 /* QuartzCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzCore.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +70,7 @@
 		6F4638BC13431220007AA2E3 = {
 			isa = PBXGroup;
 			children = (
+				6F4638F113433260007AA2E3 /* QuartzCore */,
 				6F4638D113431220007AA2E3 /* FollowMe */,
 				6F4638CA13431220007AA2E3 /* Frameworks */,
 				6F4638C813431220007AA2E3 /* Products */,
@@ -99,6 +118,31 @@
 				6F4638D813431220007AA2E3 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6F4638F113433260007AA2E3 /* QuartzCore */ = {
+			isa = PBXGroup;
+			children = (
+				6F4638F213433260007AA2E3 /* CAAnimation.h */,
+				6F4638F313433260007AA2E3 /* CAAnimationGroup.h */,
+				6F4638F413433260007AA2E3 /* CABasicAnimation.h */,
+				6F4638F513433260007AA2E3 /* CAContext.h */,
+				6F4638F613433260007AA2E3 /* CAContextImpl.h */,
+				6F4638F713433260007AA2E3 /* CAFilter.h */,
+				6F4638F813433260007AA2E3 /* CAKeyFrameAnimation.h */,
+				6F4638F913433260007AA2E3 /* CALayer.h */,
+				6F4638FA13433260007AA2E3 /* CAMediaTimingFunction.h */,
+				6F4638FB13433260007AA2E3 /* CAPropertyAnimation.h */,
+				6F4638FC13433260007AA2E3 /* CAScrollLayer.h */,
+				6F4638FD13433260007AA2E3 /* CASlotProxy.h */,
+				6F4638FE13433260007AA2E3 /* CASublayerEnumerator.h */,
+				6F4638FF13433260007AA2E3 /* CATransaction.h */,
+				6F46390013433260007AA2E3 /* CATransform.h */,
+				6F46390113433260007AA2E3 /* CATransition.h */,
+				6F46390213433260007AA2E3 /* NSValue-CATransformAdditions.h */,
+				6F46390313433260007AA2E3 /* QuartzCore.h */,
+			);
+			path = QuartzCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
