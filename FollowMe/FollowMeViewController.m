@@ -13,9 +13,21 @@
 @synthesize timer;
 @synthesize buttonHighlighted;
 @synthesize sequenceOrder;
+@synthesize sequenceCounter;
 
 - (IBAction)buttonPressed:(UIButton *)sender {
-    NSLog(@"%@", sender);
+
+    NSInteger currentSequenceNumber = [[sequenceOrder objectAtIndex:sequenceCounter] intValue];
+    
+    if (sender.tag == currentSequenceNumber) {
+        sequenceCounter++;
+        NSLog(@"Rätt knapp!");
+    }
+    else {
+        NSLog(@"Fel knapp!");
+    }
+    
+    NSLog(@"Counter: %d", sequenceCounter);
 }
 
 - (void)clickPattern {
@@ -50,19 +62,20 @@
 }
 
 - (void)runSequence:(NSTimer *)theTimer {
-    if ([[theTimer userInfo] lastObject]) {
-        int currentTag = [[[theTimer userInfo] lastObject] intValue];
-        [sequenceOrder removeLastObject];
+    if (sequenceCounter < [[theTimer userInfo] count]) {
+        int currentTag = [[[theTimer userInfo] objectAtIndex:sequenceCounter] intValue];
 
         timer = [NSTimer scheduledTimerWithTimeInterval:0.45 
                                                  target:self 
                                                selector:@selector(highLightButton:)
                                                userInfo:[NSNumber numberWithInteger:currentTag]
                                                 repeats:YES];
+        sequenceCounter++;
     }
     else {
         [theTimer invalidate];
         theTimer = nil;
+        sequenceCounter = 0;
     }
 }
 
@@ -71,8 +84,8 @@
     NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:withAmoutOfNumbers];
     
     // Create array with numbers from 1 to withAmoutOfNumbers
-    for ( int i = 1; i < withAmoutOfNumbers+1; ++i ) {
-        int randNumb = arc4random() % 24 +1;
+    for ( int i = 1; i < withAmoutOfNumbers + 1; i++ ) {
+        int randNumb = arc4random() % 24 + 1;
         [mutableArray addObject:[NSNumber numberWithInt:randNumb]];
     }
     
@@ -80,6 +93,7 @@
 }
 
 - (void)dealloc {
+    [sequenceOrder release];
     [super dealloc];
 }
 
@@ -94,8 +108,10 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+    sequenceCounter = 0;
+    sequenceOrder = [self createArray:5];
+    [sequenceOrder retain];
     
-    sequenceOrder = [self createArray:10];
     NSLog(@"SequensOrder created: %@", sequenceOrder);
 
     self.buttonHighlighted = NO;

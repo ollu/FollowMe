@@ -12,11 +12,13 @@
     NSTimer *timer;
     BOOL buttonHighlighted;
     NSMutableArray *sequenceOrder;
+    int sequenceCounter;
 }
 
 @property (nonatomic, retain) NSTimer *timer;
 @property (nonatomic) BOOL buttonHighlighted;
 @property (nonatomic, retain) NSArray *sequenceOrder;
+@property (nonatomic) int sequenceCounter;
 
 - (void)clickPattern;
 
