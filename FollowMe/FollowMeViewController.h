@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface FollowMeViewController : UIViewController {
+    IBOutlet UILabel *level;
+    IBOutlet UILabel *tries;
     NSTimer *timer;
     BOOL buttonHighlighted;
     BOOL sequenceRunning;
     NSMutableArray *sequenceOrder;
     int sequenceCounter;
     int numberOfTries;
+    int gameLevel;
 }
 
 @property (nonatomic, retain) NSTimer *timer;
@@ -23,6 +26,7 @@
 @property (nonatomic, retain) NSArray *sequenceOrder;
 @property (nonatomic) int sequenceCounter;
 @property (nonatomic) int numberOfTries;
+@property (nonatomic) int gameLevel;
 
 - (void)setupGame;
 - (void)startSequence;

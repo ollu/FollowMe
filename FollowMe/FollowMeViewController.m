@@ -16,6 +16,7 @@
 @synthesize sequenceOrder;
 @synthesize sequenceCounter;
 @synthesize numberOfTries;
+@synthesize gameLevel;
 
 - (IBAction)buttonPressed:(UIButton *)sender {
     NSLog(@"%i", sequenceRunning);
@@ -51,6 +52,9 @@
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {
+        if (numberOfTries == 0) {
+            gameLevel++;
+        }
         [self setupGame];
     }
 }
@@ -58,12 +62,14 @@
 - (void)setupGame {
     numberOfTries   = 0;
     sequenceCounter = 0;
-    sequenceOrder   = [self createArray:3];
+
+    sequenceOrder   = [self createArray:gameLevel];
     [sequenceOrder retain];
 
     [self startSequence];
     
     self.buttonHighlighted = NO;
+    level.text = [NSString stringWithFormat:@"%i", gameLevel];
 }
 
 - (void)startSequence {
@@ -73,6 +79,7 @@
                                            selector:@selector(runSequence:)
                                            userInfo:sequenceOrder
                                             repeats:YES];
+    tries.text = [NSString stringWithFormat:@"%i", numberOfTries];
 }
 
 - (void)highLightButton:(NSTimer *)theTimer {
@@ -157,6 +164,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [self makeRoundButtons];
+    gameLevel = 3;
     [self setupGame];
 
     [super viewDidLoad];
