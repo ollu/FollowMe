@@ -11,6 +11,7 @@
 @interface FollowMeViewController : UIViewController {
     NSTimer *timer;
     BOOL buttonHighlighted;
+    BOOL sequenceRunning;
     NSMutableArray *sequenceOrder;
     int sequenceCounter;
     int numberOfTries;
@@ -18,6 +19,7 @@
 
 @property (nonatomic, retain) NSTimer *timer;
 @property (nonatomic) BOOL buttonHighlighted;
+@property (nonatomic) BOOL sequenceRunning;
 @property (nonatomic, retain) NSArray *sequenceOrder;
 @property (nonatomic) int sequenceCounter;
 @property (nonatomic) int numberOfTries;
@@ -28,6 +30,7 @@
 - (void)highLightButton:(NSTimer *)theTimer;
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex;
 - (void)runSequence:(NSTimer *)theTimer;
+- (void)makeRoundButtons;
 - (NSMutableArray *)createArray:(int)withAmoutOfNumbers;
 
 - (IBAction)buttonPressed:(UIButton *)sender;

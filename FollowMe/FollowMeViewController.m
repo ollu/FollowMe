@@ -12,37 +12,41 @@
 
 @synthesize timer;
 @synthesize buttonHighlighted;
+@synthesize sequenceRunning;
 @synthesize sequenceOrder;
 @synthesize sequenceCounter;
 @synthesize numberOfTries;
 
 - (IBAction)buttonPressed:(UIButton *)sender {
-    if ([sequenceOrder objectAtIndex:sequenceCounter] != [sequenceOrder lastObject]) {
-        NSInteger currentSequenceNumber = [[sequenceOrder objectAtIndex:sequenceCounter] intValue];
-        
-        if (sender.tag == currentSequenceNumber) {
-            sequenceCounter++;
+    NSLog(@"%i", sequenceRunning);
+    
+    if (!sequenceRunning) {
+        if ([sequenceOrder objectAtIndex:sequenceCounter] != [sequenceOrder lastObject]) {
+            NSInteger currentSequenceNumber = [[sequenceOrder objectAtIndex:sequenceCounter] intValue];
+            
+            if (sender.tag == currentSequenceNumber) {
+                sequenceCounter++;
+            }
+            else {
+                [self startSequence];
+                numberOfTries++;
+            }
         }
         else {
-            [self startSequence];
-            numberOfTries++;
+            // Game Over, show stats and things here.
+            NSString *windowTitle = @"Du klarade det!";
+            NSString *gameResult = [NSString stringWithFormat:@"Du behövde %d försök \nför att klara mönstret.\nFörsök igen och \nförbättra ditt resultat.", numberOfTries];
+            NSString *newGame = @"Givet!";
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:windowTitle
+                                                            message:gameResult	
+                                                           delegate:self 
+                                                  cancelButtonTitle:nil 
+                                                  otherButtonTitles:newGame, nil];
+            [alert show];
+            [alert autorelease];
         }
     }
-    else {
-        // Game Over, show stats and things here.
-		NSString *windowTitle = @"Du klarade det!";
-		NSString *gameResult = [NSString stringWithFormat:@"Du behövde %d försök \nför att klara mönstret.\nFörsök igen och \nförbättra ditt resultat.", numberOfTries];
-		NSString *newGame = @"Givet!";
-        
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:windowTitle
-                                                        message:gameResult	
-                                                       delegate:self 
-                                              cancelButtonTitle:nil 
-                                              otherButtonTitles:newGame, nil];
-        [alert show];
-        [alert autorelease];
-    }
-
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
@@ -63,6 +67,7 @@
 }
 
 - (void)startSequence {
+    sequenceRunning = YES;
     timer = [NSTimer scheduledTimerWithTimeInterval:1 
                                              target:self 
                                            selector:@selector(runSequence:)
@@ -90,6 +95,7 @@
         [[button layer] setCornerRadius:8.0f];
         [[button layer] setMasksToBounds:YES];
         [[button layer] setBorderWidth:3.0f];
+        [[button layer] setBorderColor:[[UIColor colorWithRed:255.0 green:255.0 blue:255.0 alpha:1.0] CGColor]];
         self.buttonHighlighted = YES;
     }
 }
@@ -109,9 +115,18 @@
         [theTimer invalidate];
         theTimer = nil;
         sequenceCounter = 0;
+        sequenceRunning = NO;
     }
 }
 
+- (void)makeRoundButtons {
+    for (int i = 1; i < 25; i++) {
+         UIButton *button = (UIButton *)[self.view viewWithTag:i];
+        [[button layer] setCornerRadius:8.0f];
+        [[button layer] setMasksToBounds:YES];
+        [[button layer] setBorderWidth:0.0f];
+    }
+}
 
 - (NSMutableArray *)createArray:(int)withAmoutOfNumbers {
     NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:withAmoutOfNumbers];
@@ -141,6 +156,7 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+    [self makeRoundButtons];
     [self setupGame];
 
     [super viewDidLoad];
