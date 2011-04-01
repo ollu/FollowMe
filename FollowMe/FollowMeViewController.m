@@ -14,27 +14,46 @@
 @synthesize buttonHighlighted;
 @synthesize sequenceOrder;
 @synthesize sequenceCounter;
+@synthesize numberOfTries;
 
 - (IBAction)buttonPressed:(UIButton *)sender {
-
-    NSInteger currentSequenceNumber = [[sequenceOrder objectAtIndex:sequenceCounter] intValue];
-    
-    if (sender.tag == currentSequenceNumber) {
-        sequenceCounter++;
-        NSLog(@"Rätt knapp!");
+    if ([sequenceOrder objectAtIndex:sequenceCounter] != [sequenceOrder lastObject]) {
+        NSInteger currentSequenceNumber = [[sequenceOrder objectAtIndex:sequenceCounter] intValue];
+        
+        if (sender.tag == currentSequenceNumber) {
+            sequenceCounter++;
+        }
+        else {
+            [self runSequence];
+            numberOfTries++;
+        }
     }
     else {
-        NSLog(@"Fel knapp!");
+        // Game Over, show stats and things here.
+        NSLog(@"Game Over!");
     }
-    
-    NSLog(@"Counter: %d", sequenceCounter);
+
+    NSLog(@"Sequence Counter / Number Of Tries: %d / %d", sequenceCounter, numberOfTries);
+
 }
 
-- (void)clickPattern {
-//    for (int i = 1; i < 25; i++) {
-//        UIButton *button = (UIButton *)[self.view viewWithTag:i];
-//        [self highLightButton:button];
-//    }
+- (void)setupGame {
+    numberOfTries   = 0;
+    sequenceCounter = 0;
+    sequenceOrder   = [self createArray:3];
+    [sequenceOrder retain];
+
+    [self runSequence];
+    
+    self.buttonHighlighted = NO;
+}
+
+- (void)runSequence {
+    timer = [NSTimer scheduledTimerWithTimeInterval:1 
+                                             target:self 
+                                           selector:@selector(runSequence:)
+                                           userInfo:sequenceOrder
+                                            repeats:YES];
 }
 
 - (void)highLightButton:(NSTimer *)theTimer {
@@ -108,19 +127,8 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-    sequenceCounter = 0;
-    sequenceOrder = [self createArray:5];
-    [sequenceOrder retain];
-    
-    NSLog(@"SequensOrder created: %@", sequenceOrder);
+    [self setupGame];
 
-    self.buttonHighlighted = NO;
-    timer = [NSTimer scheduledTimerWithTimeInterval:1 
-                                             target:self 
-                                           selector:@selector(runSequence:)
-                                           userInfo:sequenceOrder
-                                            repeats:YES];
-    
     [super viewDidLoad];
 }
  
