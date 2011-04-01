@@ -24,17 +24,31 @@
             sequenceCounter++;
         }
         else {
-            [self runSequence];
+            [self startSequence];
             numberOfTries++;
         }
     }
     else {
         // Game Over, show stats and things here.
-        NSLog(@"Game Over!");
+		NSString *windowTitle = @"Du klarade det!";
+		NSString *gameResult = [NSString stringWithFormat:@"Du behövde %d försök \nför att klara mönstret.\nFörsök igen och \nförbättra ditt resultat.", numberOfTries];
+		NSString *newGame = @"Givet!";
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:windowTitle
+                                                        message:gameResult	
+                                                       delegate:self 
+                                              cancelButtonTitle:nil 
+                                              otherButtonTitles:newGame, nil];
+        [alert show];
+        [alert autorelease];
     }
 
-    NSLog(@"Sequence Counter / Number Of Tries: %d / %d", sequenceCounter, numberOfTries);
+}
 
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        [self setupGame];
+    }
 }
 
 - (void)setupGame {
@@ -43,12 +57,12 @@
     sequenceOrder   = [self createArray:3];
     [sequenceOrder retain];
 
-    [self runSequence];
+    [self startSequence];
     
     self.buttonHighlighted = NO;
 }
 
-- (void)runSequence {
+- (void)startSequence {
     timer = [NSTimer scheduledTimerWithTimeInterval:1 
                                              target:self 
                                            selector:@selector(runSequence:)

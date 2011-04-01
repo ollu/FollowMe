@@ -23,9 +23,10 @@
 @property (nonatomic) int numberOfTries;
 
 - (void)setupGame;
-- (void)runSequence;
+- (void)startSequence;
 
 - (void)highLightButton:(NSTimer *)theTimer;
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex;
 - (void)runSequence:(NSTimer *)theTimer;
 - (NSMutableArray *)createArray:(int)withAmoutOfNumbers;
 
